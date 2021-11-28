@@ -1,0 +1,3 @@
+[submodule "/home/uriah/.config/nvim"]
+	path = /home/uriah/.config/nvim
+	url = https://github.com/goldcoders/dotfiles-wsl
