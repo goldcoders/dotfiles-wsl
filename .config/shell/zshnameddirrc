@@ -1,0 +1,15 @@
+hash -d cac=/home/uriah/.cache 
+hash -d cf=/home/uriah/.config 
+hash -d dl=/home/uriah/Downloads 
+hash -d scs=/home/uriah/.local/share 
+hash -d h=/mnt/c/Users/uriah 
+hash -d sc=/home/uriah/.local/bin 
+hash -d sco=/home/uriah/.local/opt 
+hash -d bf=/home/uriah/.config/shell/bm-files 
+hash -d bd=/home/uriah/.config/shell/bm-dirs 
+hash -d cfv=/home/uriah/.config/nvim/init.vim 
+hash -d cfz=/home/uriah/.config/zsh/.zshrc 
+hash -d cfa=/home/uriah/.config/shell/aliasrc 
+hash -d cfp=/home/uriah/.config/shell/profile 
+hash -d cfs=/home/uriah/.config/starship.toml 
+hash -d cfr=/home/uriah/.config/ranger/rifle.conf 

@@ -1,0 +1,112 @@
+#!/bin/sh
+
+# Use neovim for vim if present.
+[ -x "$(command -v nvim)" ] && alias vim="nvim" vimdiff="nvim -d"
+
+
+# Verbosity and settings that you pretty much just always are going to want.
+alias \
+	cp="cp -iv" \
+	mv="mv -iv" \
+	rm="rm -vI" \
+	bc="bc -ql" \
+	mkd="mkdir -pv" \
+	yt="youtube-dl --add-metadata -i" \
+	yta="yt -x -f bestaudio/best" \
+	ffmpeg="ffmpeg -hide_banner" \
+        mp3="ncmpcpp"
+
+alias \
+    yta="yt -x -f bestaudio/best --audio-format mp3" \
+    yt4="youtube-dl -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4'" \
+    yta-aac="youtube-dl --extract-audio --audio-format aac " \
+    yta-best="youtube-dl --extract-audio --audio-format best " \
+    yta-flac="youtube-dl --extract-audio --audio-format flac " \
+    yta-m4a="youtube-dl --extract-audio --audio-format m4a " \
+    yta-mp3="youtube-dl --extract-audio --audio-format mp3 " \
+    yta-opus="youtube-dl --extract-audio --audio-format opus " \
+    yta-vorbis="youtube-dl --extract-audio --audio-format vorbis " \
+    yta-wav="youtube-dl --extract-audio --audio-format wav " \
+    ytv-best="youtube-dl -f bestvideo+bestaudio "
+
+
+alias \
+    g="git" \
+    gl="git log --all --decorate --oneline --graph" \
+    gdif="git diff" \
+    gr="git restore" \
+    gcm="git commit -am" \
+    gaa="git add ." \
+    ss="git status" \
+    ginit="git init && git add . && git commit -m 'init'" \
+    nah="git reset --hard;git clean -df" \
+    wip="git add . && git commit -m 'wip'" \
+    dot="git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME add" \
+    dos="git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME status" \
+    dif="git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME diff" \
+    pus="git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME push" \
+    com="git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME commit" \
+    sdif="sudo nvim -d" \
+    diff="nvim -d" \
+    gcs="git clone --depth 1 --filter=blob:none --sparse"
+
+alias \
+    l="exa -l --color=always --group-directories-first" \
+    ls="exa -D --color=always --group-directories-first" \
+    ll="exa -l --color=always --group-directories-first" \
+    la="exa -FSal --color=always --group-directories-first" \
+    r="$FILE" \
+    b="bat" \
+    c="clear && pbcopy < /dev/null" \
+    e="open" \
+    grep="grep --color=auto" \
+    cp="cp -iv" \
+    mv="mv -iv" \
+    mkd="mkdir -pv" \
+    cwd='pwd | pbcopy' \
+    ccat="highlight --out-format=ansi" \
+    diff="diff --color=auto" \
+    hsc="history -c" \
+    rmswp="rm ~/.local/share/nvim/swap/*.swp"
+
+
+alias \
+    chx="chmod +x" \
+    chax="sudo chmod a+x" \
+    000="sudo chmod 000" \
+    555="sudo chmod 555" \
+    600="sudo chmod 600" \
+    644="sudo chmod 644" \
+    750="sudo chmod 750" \
+    755="sudo chmod 755" \
+    775="sudo chmod 775" \
+    777="sudo chmod 777" \
+    mine="sudo chown -R $(whoami)" \
+    root="sudo su -" \
+    iroot="sudo chown -R root" \
+    perm="stat -f '%Lp'"
+
+# gpg encryption
+# verify signature for isos
+alias gpg-check="gpg2 --keyserver-options auto-key-retrieve --verify"
+# receive the key of a developer
+alias gpg-retrieve="gpg2 --keyserver-options auto-key-retrieve --receive-keys"
+
+# These common commands are just too long! Abbreviate them.
+alias \
+	ka="killall" \
+	sdn="sudo shutdown -h now" \
+	e="xdg-open" \
+	v="$EDITOR" \
+
+alias \
+    ref="shortcuts >/dev/null; source ${XDG_CONFIG_HOME:-$HOME/.config}/shell/shortcutrc ; source ${XDG_CONFIG_HOME:-$HOME/.config}/shell/zshnameddirrc" \
+    rz="source $HOME/.config/zsh/.zshrc" \
+    rp="source ~/.config/shell/profile" \
+    rt="tmux source-file ~/.tmux.conf"
+
+alias ..='cd ..'
+alias ...='cd ../..'
+alias .3='cd ../../..'
+alias .4='cd ../../../..'
+alias .5='cd ../../../../..'

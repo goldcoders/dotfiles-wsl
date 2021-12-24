@@ -1,0 +1,16 @@
+# vim: filetype=sh
+alias cac="cd /home/uriah/.cache && ls -a" \
+cf="cd /home/uriah/.config && ls -a" \
+dl="cd /home/uriah/Downloads && ls -a" \
+scs="cd /home/uriah/.local/share && ls -a" \
+h="cd /mnt/c/Users/uriah && ls -a" \
+sc="cd /home/uriah/.local/bin && ls -a" \
+sco="cd /home/uriah/.local/opt && ls -a" \
+bf="$EDITOR /home/uriah/.config/shell/bm-files" \
+bd="$EDITOR /home/uriah/.config/shell/bm-dirs" \
+cfv="$EDITOR /home/uriah/.config/nvim/init.vim" \
+cfz="$EDITOR /home/uriah/.config/zsh/.zshrc" \
+cfa="$EDITOR /home/uriah/.config/shell/aliasrc" \
+cfp="$EDITOR /home/uriah/.config/shell/profile" \
+cfs="$EDITOR /home/uriah/.config/starship.toml" \
+cfr="$EDITOR /home/uriah/.config/ranger/rifle.conf" \
