@@ -57,38 +57,27 @@ nmap Q gqap
 "-------------Tab Management--------------"
 
 nmap <leader>1 1gt<cr>
-inoremap <leader>1 <Esc>1gt<CR>
 
 nmap <leader>2 2gt<cr>
-inoremap <leader>2 <Esc>2gt<CR>
 
 nmap <leader>3 3gt<cr>
-inoremap <leader>3 <Esc>3gt<CR>
 
 nmap <leader>4 4gt<cr>
-inoremap <leader>4 <Esc>4gt<CR>
 
 nmap <leader>5 5gt<cr>
-inoremap <leader>5 <Esc>5gt<CR>
 
 nmap <leader>6 6gt<cr>
-inoremap <leader>6 <Esc>6gt<CR>
 
 nmap <leader>7 7gt<cr>
-inoremap <leader>7 <Esc>7gt<CR>
 
 nmap <leader>8 8gt<cr>
-inoremap <leader>8 <Esc>8gt<CR>
 
 nmap <leader>9 9gt<cr>
-inoremap <leader>9 <Esc>9gt<CR>
 
 
 nmap <leader>t :tabnew<cr>
-inoremap <leader>t <Esc>:tabnew<CR>
 
 nmap <leader>w :tabonly<cr>
-inoremap <leader>w <Esc>:tabonly<CR>
 
 " Buffer Management
 nmap <silent> bp :bp<CR>
@@ -582,7 +571,7 @@ nmap f <Plug>(easymotion-overwin-f)
 "nmap <silent><nowait> <space>k  <Plug>(easymotion-k)
 
 " source vim
-nnoremap  <leader>sv :source $MYVIMRC <cr>
+nnoremap  ,sv :source $MYVIMRC <cr>
 
 let g:loaded_python_provider=0
 let g:ruby_host_prog='/home/uriah/.gem/ruby/2.7.0/bin/neovim-ruby-host'
