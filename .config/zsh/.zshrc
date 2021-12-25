@@ -1,31 +1,37 @@
 # check directory
+#
+# Note: Bash on Windows does not currently apply umask properly.
+if [[ "$(umask)" = "0000" ]]; then
+  umask 0022
+fi
+
 if [[ ! -d $ZSH_CACHE_DIR ]]; then
     mkdir -pv $ZSH_CACHE_DIR
 fi
 
 plugins=(
 #  ubuntu
-  git
+#  git
   command-not-found
   cargo
   rust
   rustup
   zsh-autosuggestions
-  alias-finder
+#  alias-finder
   zoxide
   fzf
 #  fd
 #  jsontools
 #  httpie
-#  pip
-#  pyenv
+  pip
+  pyenv
 # nmap
   npm
-  yarn
+#  yarn
   fnm
   pass
-##  vscode
-  sudo
+  vscode
+#  sudo
   zsh-syntax-highlighting
 )
 
@@ -49,7 +55,7 @@ setopt inc_append_history       # immediate append ,ensures commands are added t
 
 setopt autocd		# Automatically cd into typed directory.
 stty stop undef		# Disable ctrl-s to freeze terminal.
-
+stty -ixon
 
 autoload -U compinit
 zstyle ':completion:*' menu select
@@ -137,11 +143,9 @@ bindkey -M main ' ' expand-alias
 
 eval "$(starship init zsh)"
 eval "$(fnm env)"
-source $CARGO_HOME/env
+source $HOME/.cargo/env
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # Generated for envman. Do not edit.
 [ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
-
-alias usbip=/usr/lib/linux-tools/5.4.0-77-generic/usbip
