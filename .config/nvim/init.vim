@@ -14,7 +14,7 @@ if exists('g:vscode')
     " VSCode extension
 Plug 'asvetliakov/vim-easymotion', { 'as': 'vsc-easymotion' }
 else
-    " ordinary neovim
+" ordinary neovim
 Plug 'tpope/vim-surround'
 Plug 'neoclide/coc.nvim'
 Plug 'airblade/vim-gitgutter'

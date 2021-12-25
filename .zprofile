@@ -1,7 +1,7 @@
 # Profile file. Runs on login. Environmental variables are set here.
 # symlink .zprofile to .config/shell/profile
 export PATH="$PATH:$(du "$HOME/.local/bin/" | cut -f2 | tr '\n' ':' | sed 's/:*$//'):$HOME/.config/composer/vendor/bin:$(ruby -e 'puts Gem.user_dir')/bin:$HOME/.go/bin"
-
+export TERM=xterm-256color
 export LANG=en_US.UTF-8
 
 # Default programs:
