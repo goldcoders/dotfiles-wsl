@@ -1,37 +1,33 @@
 # check directory
 #
-# Note: Bash on Windows does not currently apply umask properly.
-if [[ "$(umask)" = "0000" ]]; then
-  umask 0022
-fi
 
 if [[ ! -d $ZSH_CACHE_DIR ]]; then
     mkdir -pv $ZSH_CACHE_DIR
 fi
 
 plugins=(
-#  ubuntu
-#  git
+  ubuntu
+  git
   command-not-found
   cargo
   rust
   rustup
   zsh-autosuggestions
-#  alias-finder
+  alias-finder
   zoxide
   fzf
-#  fd
-#  jsontools
-#  httpie
+  fd
+  jsontools
+  httpie
   pip
-  pyenv
-# nmap
+  zsh-pyenv
+  nmap
   npm
-#  yarn
+  yarn
   fnm
   pass
   vscode
-#  sudo
+  sudo
   zsh-syntax-highlighting
 )
 
@@ -55,7 +51,6 @@ setopt inc_append_history       # immediate append ,ensures commands are added t
 
 setopt autocd		# Automatically cd into typed directory.
 stty stop undef		# Disable ctrl-s to freeze terminal.
-stty -ixon
 
 autoload -U compinit
 zstyle ':completion:*' menu select
@@ -125,7 +120,7 @@ autoload edit-command-line; zle -N edit-command-line
 bindkey '^e' edit-command-line
 
 
-#bindkey '^ ' autosuggest-accept
+bindkey '^ ' autosuggest-accept
 
 # Expand All Aliases when pressing spacebar
 function expand-alias() {
@@ -135,17 +130,15 @@ function expand-alias() {
 zle -N expand-alias
 bindkey -M main ' ' expand-alias
 
-
-[ -f "${XDG_CONFIG_HOME:-$HOME/.config}/shell/shortcutrc" ] && source "${XDG_CONFIG_HOME:-$HOME/.config}/shell/shortcutrc"
-[ -f "${XDG_CONFIG_HOME:-$HOME/.config}/shell/aliasrc" ] && source "${XDG_CONFIG_HOME:-$HOME/.config}/shell/aliasrc"
-[ -f "${XDG_CONFIG_HOME:-$HOME/.config}/shell/zshnameddirrc" ] && source "${XDG_CONFIG_HOME:-$HOME/.config}/shell/zshnameddirrc"
-
-
 eval "$(starship init zsh)"
 eval "$(fnm env)"
 source $HOME/.cargo/env
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+[ ! -f ${XDG_CONFIG_HOME:-$HOME/.config}/shell/shortcutrc ] && shortcuts >/dev/null 2>&1 &
+[ -f "${XDG_CONFIG_HOME:-$HOME/.config}/shell/shortcutrc" ] && source "${XDG_CONFIG_HOME:-$HOME/.config}/shell/shortcutrc"
+[ -f "${XDG_CONFIG_HOME:-$HOME/.config}/shell/aliasrc" ] && source "${XDG_CONFIG_HOME:-$HOME/.config}/shell/aliasrc"
+[ -f "${XDG_CONFIG_HOME:-$HOME/.config}/shell/zshnameddirrc" ] && source "${XDG_CONFIG_HOME:-$HOME/.config}/shell/zshnameddirrc"
 
 # Generated for envman. Do not edit.
 [ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
