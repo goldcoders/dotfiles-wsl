@@ -20,7 +20,7 @@ Plug 'vim-test/vim-test', Cond(!exists('g:vscode'))
 Plug 'easymotion/vim-easymotion', Cond(!exists('g:vscode'))
 " Shared plugins with VSCode
 Plug 'asvetliakov/vim-easymotion', Cond(exists('g:vscode'), { 'as': 'vsc-easymotion' })
-"Plug 'morhetz/gruvbox', Cond(!exists('g:vscode'))
+Plug 'morhetz/gruvbox', Cond(!exists('g:vscode'))
 Plug 'vim-airline/vim-airline', Cond(!exists('g:vscode'))
 Plug 'vim-airline/vim-airline-themes', Cond(!exists('g:vscode'))
 Plug 'terryma/vim-multiple-cursors', Cond(!exists('g:vscode'))
@@ -103,7 +103,7 @@ if !exists('g:vscode')
 " Source vim files
   source ~/.config/nvim/settings.vim
   source ~/.config/nvim/split.vim
-  "source ~/.config/nvim/theme.vim
+  source ~/.config/nvim/theme.vim
   source ~/.config/nvim/mappings.vim
   source ~/.config/nvim/auto_command.vim
   source ~/.config/nvim/buffer.vim
