@@ -14,7 +14,8 @@ alias \
 	yt="youtube-dl --add-metadata -i" \
 	yta="yt -x -f bestaudio/best" \
 	ffmpeg="ffmpeg -hide_banner" \
-    mp3="ncmpcpp"
+    mp3="ncmpcpp" \
+    rmswp="rm ~/.local/share/nvim/swap/*.swp"
 
 alias \
     yta="yt -x -f bestaudio/best --audio-format mp3" \

@@ -13,3 +13,4 @@ cfa	${XDG_CONFIG_HOME:-$HOME/.config}/shell/aliasrc		# aliases used by zsh (and 
 cfp	${XDG_CONFIG_HOME:-$HOME/.config}/shell/profile		# profile file for login settings for zsh
 cfs     ${XDG_CONFIG_HOME:-$HOME/.config}/starship.toml
 cfr     ${XDG_CONFIG_HOME:-$HOME/.config}/ranger/rifle.conf
+cft $HOME/.tmux.conf

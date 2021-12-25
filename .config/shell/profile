@@ -47,13 +47,12 @@ export GIT_ASKPASS=true
 export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
 
 export ANDROID_HOME=$HOME/Applications/android
-export SDKTOOLSBIN=$ANDROID_HOME//cmdline-tools/latest/bin
+export SDKTOOLSBIN=$ANDROID_HOME/cmdline-tools/latest/bin
 export PLATFORMTOOLs=$ANDROID_HOME/platform-tools
 
 export ENABLE_FLUTTER_DESKTOP=true
 
 export STARSHIP_CACHE="${XDG_CONFIG_HOME}/starship/cache"
-export STARSHIP_CONFIG="${XDG_CONFIG_HOME}/starship/config.toml"
 
 export ZSH_CACHE_DIR="${HOME}/.cache/oh-my-zsh"
 export ZSH="$HOME/.oh-my-zsh"
@@ -62,13 +61,12 @@ export ZSH_CUSTOM=$ZSH/custom
 export CARGO_NET_GIT_FETCH_WITH_CLI=true
 export HISTTIMEFORMAT="[%F %T] "
 
-# export PATH="$PYENV_ROOT/bin:$PATH"
 export PATH=$PATH:$SDKTOOLSBIN:$PLATFORMTOOLS
 export PATH="$PATH":"$HOME/.pub-cache/bin"
 export PATH=$PATH:$HOME/.cargo/bin
 export PATH=$HOME/.fnm:$PATH
 
-
+export PATH="$PATH":"/usr/lib/dart/bin"
 # reverse path if we want to use old dart
 # for now we are using the stable dart and flutter
 export PATH="$HOME/fvm/default/bin":"$PATH"

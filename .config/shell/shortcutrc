@@ -19,3 +19,4 @@ cfa="$EDITOR /home/uriah/.config/shell/aliasrc" \
 cfp="$EDITOR /home/uriah/.config/shell/profile" \
 cfs="$EDITOR /home/uriah/.config/starship.toml" \
 cfr="$EDITOR /home/uriah/.config/ranger/rifle.conf" \
+cft="$EDITOR /home/uriah/.tmux.conf" \

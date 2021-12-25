@@ -18,3 +18,4 @@ hash -d cfa=/home/uriah/.config/shell/aliasrc
 hash -d cfp=/home/uriah/.config/shell/profile 
 hash -d cfs=/home/uriah/.config/starship.toml 
 hash -d cfr=/home/uriah/.config/ranger/rifle.conf 
+hash -d cft=/home/uriah/.tmux.conf 
