@@ -1,6 +1,5 @@
 # Profile file. Runs on login. Environmental variables are set here.
 # symlink .zprofile to .config/shell/profile
-export PATH="$PATH:$(du "$HOME/.local/bin/" | cut -f2 | tr '\n' ':' | sed 's/:*$//'):$HOME/.config/composer/vendor/bin:$(ruby -e 'puts Gem.user_dir')/bin:$HOME/.go/bin"
 export TERM=xterm-256color
 export LANG=en_US.UTF-8
 
@@ -61,15 +60,21 @@ export ZSH_CUSTOM=$ZSH/custom
 export CARGO_NET_GIT_FETCH_WITH_CLI=true
 export HISTTIMEFORMAT="[%F %T] "
 
-export PATH=$PATH:$SDKTOOLSBIN:$PLATFORMTOOLS
+export PATH="$PATH":"$SDKTOOLSBIN":"$PLATFORMTOOLS"
 export PATH="$PATH":"$HOME/.pub-cache/bin"
-export PATH=$PATH:$HOME/.cargo/bin
-export PATH=$HOME/.fnm:$PATH
+export PATH="$PATH":"$HOME/.cargo/bin"
+export PATH="$PATH":"$COMPOSER_HOME/vendor/bin"
+
+#export PATH="$PATH:$(ruby -e 'puts Gem.user_dir')/bin"
+export PATH="$PATH":"$GOPATH/bin"
+export PATH="$PATH":"$HOME/.local/bin:/bin:/usr/bin"
 
 export PATH="$PATH":"/usr/lib/dart/bin"
 # reverse path if we want to use old dart
 # for now we are using the stable dart and flutter
 export PATH="$HOME/fvm/default/bin":"$PATH"
+export PATH="$HOME/.fnm":"$PATH"
+
 
 
 # eval "$(pyenv init --path)"

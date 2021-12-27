@@ -11,6 +11,7 @@ xb="cd /home/uriah/.local/bin && ls -a" \
 xo="cd /home/uriah/.local/opt && ls -a" \
 xc="cd /home/uriah/.config && ls -a" \
 xC="cd /home/uriah/.cache && ls -a" \
+xx="cd /home/uriah/Code && ls -a" \
 bf="$EDITOR /home/uriah/.config/shell/bm-files" \
 bd="$EDITOR /home/uriah/.config/shell/bm-dirs" \
 cfv="$EDITOR /home/uriah/.config/nvim/init.vim" \

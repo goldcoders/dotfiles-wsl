@@ -12,3 +12,4 @@ xb  $HOME/.local/bin
 xo  $HOME/.local/opt
 xc  $HOME/.config
 xC  $HOME/.cache
+xx  $HOME/Code

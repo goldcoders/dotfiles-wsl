@@ -10,6 +10,7 @@ hash -d xb=/home/uriah/.local/bin
 hash -d xo=/home/uriah/.local/opt 
 hash -d xc=/home/uriah/.config 
 hash -d xC=/home/uriah/.cache 
+hash -d xx=/home/uriah/Code 
 hash -d bf=/home/uriah/.config/shell/bm-files 
 hash -d bd=/home/uriah/.config/shell/bm-dirs 
 hash -d cfv=/home/uriah/.config/nvim/init.vim 
